@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FilteringEvents"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             x:Class="FilteringEvents.MainPage">
+    <ContentPage.Behaviors>
+        <local:CalendarBehavior/>
+    </ContentPage.Behaviors>
+    <Grid x:Name="MainLayout" Padding="0,20,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+        </Grid.RowDefinitions>
+        <combobox:SfComboBox Grid.Row="0" BorderColor="Blue" ShowDropDownHeaderView="true" 
+                             IsEditableMode="true" HeightRequest="40" DisplayMemberPath="Subject" x:Name="comboBox">
+        </combobox:SfComboBox>
+        <syncfusion:SfCalendar Grid.Row="1" x:Name="calendar">
+        </syncfusion:SfCalendar>
+    </Grid>
+</ContentPage>
