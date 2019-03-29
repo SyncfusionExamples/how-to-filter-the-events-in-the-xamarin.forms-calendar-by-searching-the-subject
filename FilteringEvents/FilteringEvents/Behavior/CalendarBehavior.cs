@@ -25,6 +25,7 @@ namespace FilteringEvents
 
             // To Display Inline appointment layout.
             calendar.ShowInlineEvents = true;
+            //Inline ViewMode 
             calendar.InlineViewMode = InlineViewMode.Agenda;
             var currentDay = DateTime.Now.Date;
 
